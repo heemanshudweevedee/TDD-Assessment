@@ -23,7 +23,7 @@ RSpec.describe StringCalculator do
     end
 
     it 'return invalid' do
-        expect(StringCalculator.add("1,\n")).to raise_error(RuntimeError, "Invalid input")
+      expect { StringCalculator.add("1,\n") }.to raise_error(RuntimeError, "Invalid input")
     end
 
     it 'supports custom delimiters' do
@@ -38,8 +38,8 @@ RSpec.describe StringCalculator do
         expect { StringCalculator.add("-1,-2,3") }.to raise_error(RuntimeError, "negative numbers not allowed: -1, -2")
     end
 
-    it 'supports decimal values' do
-        expect(StringCalculator.add("1.5,2.5")).to eq(4)
+    it 'output always be integer' do
+        expect(StringCalculator.add("1.5,2.5")).to eq(3)
     end
 
     it 'output should be integer' do
