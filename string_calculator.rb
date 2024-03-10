@@ -28,7 +28,7 @@ class StringCalculator
       end
       raise "negative numbers not allowed:" + temp.chop  if xyz
 
-      # numbers.split(delimiter).map(&:to_i).sum
+      # Sum of integer number in array
       final = 0
       numbers.split(delimiter).map.each{|a| final = final + a.to_i}
       final
