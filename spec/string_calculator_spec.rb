@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require_relative '../string_calculator'
 RSpec.describe StringCalculator do
   describe 'Verify String calculator add method ' do
     it 'returns 0 for an empty string' do
